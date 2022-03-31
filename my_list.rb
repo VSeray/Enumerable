@@ -10,4 +10,3 @@ class MyList
     @list.each(&block)
   end
 end
-
