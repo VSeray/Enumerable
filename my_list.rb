@@ -1,4 +1,4 @@
-require_relative 'enumerable'
+require_relative './enumerable'
 
 class MyList
  include MyEnumerable
@@ -17,17 +17,17 @@ irb> list = MyList.new(1, 2, 3, 4)
 => #<MyList: @list=[1, 2, 3, 4]>
 
 # Test #all?
-irb> list.all? {|e| e < 5}
+irb> list = MyList.new(1, 2, 3, 4)
 => true
-irb> list.all? {|e| e > 5}
+irb> list.my_all? {|e| e > 5}
 => false
 
 # Test #any?
-irb> list.any? {|e| e == 2}
+irb> list.my_any? {|e| e == 2}
 => true
-irb> list.any? {|e| e == 5}
+irb> list.my_any? {|e| e == 5}
 => false
 
 # Test #filter
-irb> list.filter {|e| e.even?}
+irb> list.my_filter? {|e| e.even?}
 => [2, 4]
