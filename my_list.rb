@@ -1,31 +1,33 @@
 require_relative './enumerable'
 
 class MyList
- include MyEnumerable
- def initialize(*list)
+  include MyEnumerable
+  def initialize(*list)
    @list = list
   end
 
- def each(&block)
+  def each(&block)
    @list.each(&block)
   end
 end
 
-#verify solution
+# verify solution
 # Create our list
-list = MyList.new(1, 2, 3, 4)
+irb> list = MyList.new(1, 2, 3, 4)
+# => <MyList: @list=[1, 2, 3, 4]>
 
-puts(list.all? { |e| e < 5 })
+# Test #all?
+irb> list = MyList.new(1, 2, 3, 4)
 # => true
-puts(list.all? { |e| e > 5 })
+irb> list.my_all? {|e| e > 5}
 # => false
 
 # Test #any?
-puts(list.any? { |e| e == 2 })
+irb> list.my_any? {|e| e == 2}
 # => true
-puts(list.any? { |e| e == 5 })
+irb> list.my_any? {|e| e == 5}
 # => false
 
 # Test #filter
-puts(list.filter(&:even?))
+irb> list.my_filter? {|e| e.even?}
 # => [2, 4]
