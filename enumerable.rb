@@ -19,7 +19,7 @@ module MyEnumerable
     any
   end
 
-  def my_filter
+  def my_filter?
     return unless block_given?
 
     numbers = []
