@@ -12,9 +12,6 @@ class MyList
 end
 
 # verify solution
-# Create our list
-list = MyList.new(1, 2, 3, 4)
-# => <MyList: @list=[1, 2, 3, 4]>
 
 # Test #all?
 list = MyList.new(1, 2, 3, 4)
@@ -29,5 +26,5 @@ list.my_any? { |e| e == 5 }
 # => false
 
 # Test #filter
-list.my_filter? { |e| e.even? }
+list.my_filter { |e| e.even? }
 # => [2, 4]
