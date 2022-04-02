@@ -28,5 +28,5 @@ irb > list.my_any? { |e| e == 5 }
 # => false
 
 # Test #filter
-irb > list.my_filter? {  &:even? }
+irb > list.my_filter? { |e| e.even? }
 # => [2, 4]
