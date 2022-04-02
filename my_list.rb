@@ -12,21 +12,21 @@ class MyList
 end
 
 # Create our list
-irb> list = MyList.new(1, 2, 3, 4)
+irb > list = MyList.new(1, 2, 3, 4)
 # => <MyList: @list=[1, 2, 3, 4]>
 
 # Test #all?
-irb> list.my_all? {|e| e < 5}
+irb > list.my_all? { |e| e < 5 }
 # => true
-irb> list.my_all? {|e| e > 5}
+irb > list.my_all? { |e| e > 5 }
 # => false
 
 # Test #any?
-irb> list.my_any? {|e| e == 2}
+irb > list.my_any? { |e| e == 2 }
 # => true
-irb> list.my_any? {|e| e == 5}
+irb > list.my_any? { |e| e == 5} 
 # => false
 
 # Test #filter
-irb> list.my_filter? {|e| e.even?}
+irb > list.my_filter? { |e| e.even? }
 # => [2, 4]
