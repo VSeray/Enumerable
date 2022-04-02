@@ -13,7 +13,7 @@ end
 
 # Create our list
 irb> list = MyList.new(1, 2, 3, 4)
-3 => <MyList: @list=[1, 2, 3, 4]>
+# => <MyList: @list=[1, 2, 3, 4]>
 
 # Test #all?
 irb> list.my_all? {|e| e < 5}
